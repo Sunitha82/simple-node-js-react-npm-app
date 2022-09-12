@@ -1,8 +1,8 @@
 pipeline {
     agent {
-        any {
+        docker {
             image 'node:latest'
-            args '-p 3000:3000 -u root'
+            args '-p 3000:3000'
         }
     }
    
