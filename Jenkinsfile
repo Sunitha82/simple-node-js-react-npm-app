@@ -1,12 +1,12 @@
 pipeline {
     agent {
         docker {
-            image 'node:lts-buster-slim'
+            image 'node:6-alpine'
             args '-p 3000:3000 -u root'
         }
     }
     environment {
-        CI = 'true'
+        HOME = '.'
     }
     stages {
         stage('Build') {
